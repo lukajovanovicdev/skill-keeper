@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/skill-keeper/static/css/main.525bdac2.chunk.css",
+    "main.js": "/skill-keeper/static/js/main.b3684b21.chunk.js",
+    "main.js.map": "/skill-keeper/static/js/main.b3684b21.chunk.js.map",
+    "runtime-main.js": "/skill-keeper/static/js/runtime-main.e6aa5939.js",
+    "runtime-main.js.map": "/skill-keeper/static/js/runtime-main.e6aa5939.js.map",
+    "static/js/2.56c230cf.chunk.js": "/skill-keeper/static/js/2.56c230cf.chunk.js",
+    "static/js/2.56c230cf.chunk.js.map": "/skill-keeper/static/js/2.56c230cf.chunk.js.map",
+    "static/js/3.7d21b867.chunk.js": "/skill-keeper/static/js/3.7d21b867.chunk.js",
+    "static/js/3.7d21b867.chunk.js.map": "/skill-keeper/static/js/3.7d21b867.chunk.js.map",
+    "index.html": "/skill-keeper/index.html",
+    "static/css/main.525bdac2.chunk.css.map": "/skill-keeper/static/css/main.525bdac2.chunk.css.map",
+    "static/js/2.56c230cf.chunk.js.LICENSE.txt": "/skill-keeper/static/js/2.56c230cf.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/skill-keeper/static/media/bosch-colors.62f89b0d.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e6aa5939.js",
+    "static/js/2.56c230cf.chunk.js",
+    "static/css/main.525bdac2.chunk.css",
+    "static/js/main.b3684b21.chunk.js"
+  ]
+}
