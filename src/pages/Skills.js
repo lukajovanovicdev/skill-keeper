@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import AllSkills from "../components/AllSkills";
+import FormSkills from "../components/FormSkills";
 
 export default function Skills() {
   const skills = [
@@ -14,9 +15,8 @@ export default function Skills() {
   ];
   return (
     <div>
-     <FormSkills/>
+      <FormSkills />
       <AllSkills skills={skills} />
-  
     </div>
   );
 }
