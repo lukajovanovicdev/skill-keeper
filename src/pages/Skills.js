@@ -1,9 +1,22 @@
-import React from "react";
-import FormSkills from "../components/FormSkills";
+import React, { useState } from "react";
+import AllSkills from "../components/AllSkills";
 
 export default function Skills() {
+  const skills = [
+    {
+      name: "Skill 1",
+      url: "https://picsum.photos/100/100",
+    },
+    {
+      name: "Skill ",
+      url: "https://picsum.photos/100/100",
+    },
+  ];
   return (
-    <FormSkills/>
-  )
-
+    <div>
+     <FormSkills/>
+      <AllSkills skills={skills} />
+  
+    </div>
+  );
 }
