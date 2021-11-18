@@ -1,0 +1,6 @@
+.Card {
+  display: flex;
+  flex-direction: column;
+  background-color: aquamarine;
+  padding: 10px;
+}

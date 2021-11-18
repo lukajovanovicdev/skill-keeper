@@ -1,5 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
+import AllSkills from "../components/AllSkills";
 
 export default function Skills() {
-  return <div>SKILLS</div>;
+  const skills = [
+    {
+      name: "Skill 1",
+      url: "https://picsum.photos/100/100",
+    },
+    {
+      name: "Skill ",
+      url: "https://picsum.photos/100/100",
+    },
+  ];
+  return (
+    <div>
+      <AllSkills skills={skills} />
+    </div>
+  );
 }
