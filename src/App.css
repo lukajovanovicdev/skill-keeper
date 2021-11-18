@@ -3,7 +3,7 @@ html {
 }
 
 .App {
-  background-image: url('./assets/bosch-colors.jpg');
+  background-image: url("./assets/bosch-colors.jpg");
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -50,4 +50,29 @@ h3 {
 h5 {
   font-size: 1.1rem;
   margin: 0.5rem 0;
+}
+.Nav {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  background-color: #177fce;
+}
+.Nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.Nav ul li {
+  display: inline-block;
+  float: left;
+}
+.Nav ul li a {
+  display: block;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
