@@ -1,5 +1,6 @@
 import React from "react";
+import FormUser from "../components/FormUser";
 
 export default function Users() {
-  return <div>USERS</div>;
+  return <FormUser/>
 }
