@@ -14,7 +14,9 @@ export default function Skills() {
   ];
   return (
     <div>
+     <FormSkills/>
       <AllSkills skills={skills} />
+  
     </div>
   );
 }
