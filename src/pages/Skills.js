@@ -1,22 +1,16 @@
 import React, { useState } from "react";
 import AllSkills from "../components/AllSkills";
 import FormSkills from "../components/FormSkills";
+import useAxios from "../Hooks/useAxios";
 
 export default function Skills() {
-  const skills = [
-    {
-      name: "Skill 1",
-      url: "https://picsum.photos/100/100",
-    },
-    {
-      name: "Skill ",
-      url: "https://picsum.photos/100/100",
-    },
-  ];
+  const skills = useAxios("https://6195285474c1bd00176c6be7.mockapi.io/skills");
+  console.log("Skills ", skills);
+
   return (
     <div>
       <FormSkills />
-      <AllSkills skills={skills} />
+      <AllSkills skills={skills.data || []} />
     </div>
   );
 }

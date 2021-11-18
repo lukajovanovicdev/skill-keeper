@@ -4,18 +4,17 @@ const useAxios = (url) => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   useEffect(() => {
-   
     const getData = async () => {
       try {
         const res = await axios.get(url);
-        setData(res);
+        setData(res.data);
       } catch (err) {
         setError(err);
       }
     };
     getData();
   }, [url]);
- console.log(data);
-  return { data,  error };
+  console.log("A", data);
+  return { data, error };
 };
 export default useAxios;
