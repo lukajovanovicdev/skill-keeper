@@ -8,11 +8,19 @@ export default function Users() {
   useEffect(() => {
     usersAPI.get().then((data) => setUsers(data));
   }, []);
-
+  const deleteUserHandler = (id) => {
+    // skillsAPI
+    //   .get()
+    //   .then((data) => setSkills(data.filter((curr) => curr.id !== id)));
+    // setSkills(skills.filter((curr) => curr.id !== skillsAPI.delete(id)));
+    usersAPI
+      .delete(id)
+      .then(() => usersAPI.get().then((data) => setUsers(data)));
+  };
   return (
     <>
       <FormUser setUsers={setUsers} />
-      <AllUsers users={users} />
+      <AllUsers users={users} deleteUserHandler={deleteUserHandler} />
     </>
   );
 }
