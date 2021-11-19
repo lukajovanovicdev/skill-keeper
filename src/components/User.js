@@ -10,7 +10,7 @@ import EditTwoToneIcon from "@mui/icons-material/EditTwoTone";
 
 export default function User(props) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 350 }} style={{ margin: "10px" }}>
       <CardActionArea>
         <CardMedia
           component="img"
