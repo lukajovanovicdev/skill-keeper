@@ -13,8 +13,9 @@ function FormSkills({ skills, setSkills }) {
   };
 
   const skillPostHandler = () => {
-    skillsAPI.post({ name: name, image: image });
-    skillsAPI.get().then((data) => setSkills(data));
+    skillsAPI
+      .post({ name: name, image: image })
+      .then(() => skillsAPI.get().then((data) => setSkills(data)));
   };
 
   const writingImageUrl = (event) => {
@@ -50,6 +51,7 @@ function FormSkills({ skills, setSkills }) {
       >
         Save
       </button>
+
       {/* <button className="button" type="submit">Cancel</button> */}
     </form>
   );

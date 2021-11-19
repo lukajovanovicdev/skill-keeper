@@ -10,11 +10,18 @@ const skills = {
       console.log(err);
     }
   },
-  post: (skillData) => {
+  post: async (skillData) => {
     axios
       .post(skillURL, skillData)
       .then((response) => response)
       .catch((err) => console.log(err));
+  },
+  delete: async (id) => {
+    await axios
+      .delete(`https://6195285474c1bd00176c6be7.mockapi.io/skills/${id}`)
+      .then((response) => {
+        console.log(response.data);
+      });
   },
 };
 
