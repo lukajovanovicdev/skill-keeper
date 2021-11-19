@@ -8,9 +8,10 @@ export default function Users() {
   useEffect(() => {
     usersAPI.get().then((data) => setUsers(data));
   }, []);
+
   return (
     <>
-      <FormUser />
+      <FormUser setUsers={setUsers} />
       <AllUsers users={users} />
     </>
   );
