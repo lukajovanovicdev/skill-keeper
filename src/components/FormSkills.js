@@ -3,6 +3,7 @@ import "./FormSkills.css";
 import useAxios from "../Hooks/useAxios";
 import skillsAPI from "../api/skillsHandler";
 import { Button } from "@mui/material";
+import AllSkills from "./AllSkills";
 
 function FormSkills({ skills, setSkills }) {
   const [name, setName] = useState("");
