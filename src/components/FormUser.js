@@ -1,3 +1,4 @@
+import { Button } from '@mui/material';
 import React , {useState} from 'react';
 
 
@@ -34,35 +35,35 @@ function FormUser() {
         <input
           className="input"
           type="text"
-          placeholder="name"
+          placeholder="Name"
           onChange={writingName}
           value={name}
         />
         <input
           className="input"
           type="text"
-          placeholder="image"
+          placeholder="Image"
           onChange={writingImageUrl}
           value={image}
         />
         <input
           className="input"
           type="text"
-          placeholder="dateOfBirth"
+          placeholder="Date Of Birth"
           onChange={writingDateOfBirth}
           value={dateOfBirth}
         />
         <input
           className="input"
           type="text"
-          placeholder="location"
+          placeholder="Location"
           onChange={writingLocation}
           value={location}
         />
                 
-        <button className="button" type="submit">
+        <Button variant="contained" className="button" type="submit">
           Save
-        </button>
+        </Button>
         {/* <button className="button" type="submit">Cancel</button> */}
       </form>
     );
