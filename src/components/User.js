@@ -3,7 +3,10 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material";
+import { CardActionArea, IconButton } from "@mui/material";
+
+import DeleteIcon from "@mui/icons-material/Delete";
+import EditTwoToneIcon from "@mui/icons-material/EditTwoTone";
 
 export default function User(props) {
   return (
@@ -25,6 +28,18 @@ export default function User(props) {
           <Typography gutterBottom component="div">
             {props.location}
           </Typography>
+
+          <IconButton
+            aria-label="delete"
+            color="primary"
+            onClick={() => props.deleteUserHandler(props.id)}
+          >
+            <DeleteIcon />
+          </IconButton>
+
+          <IconButton aria-label="edit" color="primary">
+            <EditTwoToneIcon />
+          </IconButton>
         </CardContent>
       </CardActionArea>
     </Card>

@@ -1,7 +1,11 @@
 import React from "react";
 import Skill from "./Skill";
 
-export default function AllSkills({ skills, skillsHandlerDelete }) {
+export default function AllSkills({
+  skills,
+  skillsHandlerDelete,
+  useCheckbox,
+}) {
   console.log("as", skills);
   return (
     <div>
@@ -12,6 +16,7 @@ export default function AllSkills({ skills, skillsHandlerDelete }) {
           id={skill.id}
           key={skill.id}
           skillsHandlerDelete={skillsHandlerDelete}
+          useCheckbox={useCheckbox}
         />
       ))}
     </div>
