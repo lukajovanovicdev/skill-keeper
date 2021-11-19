@@ -1,4 +1,5 @@
 .form{
+    align-items: center;
     display: flex;
     flex-direction: column;
 }
@@ -6,12 +7,16 @@
 .input {
     width: 300px;
     height: 20px;
-    background-color: #f1f1f1;
+    /* background-color: #f1f1f1; */
     padding: 10px;
     margin: 10px;
     color: black;
     font-size: 15px;
     text-align: center;
+    border-bottom: 1px solid #177FCE;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
 }
 
 .button {

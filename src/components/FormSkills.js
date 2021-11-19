@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./FormSkills.css";
 import useAxios from "../Hooks/useAxios";
 import skillsAPI from "../api/skillsHandler";
+import { Button } from "@mui/material";
 
 function FormSkills({ skills, setSkills }) {
   const [name, setName] = useState("");
@@ -33,24 +34,25 @@ function FormSkills({ skills, setSkills }) {
       <input
         className="input"
         type="text"
-        placeholder="name"
+        placeholder="Name"
         onChange={writingName}
         value={name}
       />
       <input
         className="input"
         type="text"
-        placeholder="image"
+        placeholder="Image"
         onChange={writingImageUrl}
         value={image}
       />
-      <button
+      <Button
         className="button"
         type="submit"
+        variant="contained"
         onClick={() => skillPostHandler()}
       >
         Save
-      </button>
+      </Button>
 
       {/* <button className="button" type="submit">Cancel</button> */}
     </form>
