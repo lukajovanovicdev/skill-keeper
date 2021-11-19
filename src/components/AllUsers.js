@@ -1,9 +1,11 @@
 import React from "react";
 import User from "./User";
+import "./User.css";
+
 
 export default function AllUsers({ users, deleteUserHandler }) {
   return (
-    <div>
+    <div className="usersStyle">
       {users.map((user) => (
         <User
           id={user.id}
