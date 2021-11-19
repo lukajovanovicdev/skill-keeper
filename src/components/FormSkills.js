@@ -1,12 +1,20 @@
 import React, { useState } from "react";
 import "./FormSkills.css";
+import useAxios from "../Hooks/useAxios";
+import skillsAPI from "../api/skillsHandler";
 
-function FormSkills() {
+function FormSkills({ skills, setSkills }) {
   const [name, setName] = useState("");
   const [image, setImage] = useState("");
+  const { createSkill } = useAxios();
 
   const writingName = (event) => {
     setName(event.target.value);
+  };
+
+  const skillPostHandler = () => {
+    skillsAPI.post({ name: name, image: image });
+    skillsAPI.get().then((data) => setSkills(data));
   };
 
   const writingImageUrl = (event) => {
@@ -35,7 +43,11 @@ function FormSkills() {
         onChange={writingImageUrl}
         value={image}
       />
-      <button className="button" type="submit">
+      <button
+        className="button"
+        type="submit"
+        onClick={() => skillPostHandler()}
+      >
         Save
       </button>
       {/* <button className="button" type="submit">Cancel</button> */}

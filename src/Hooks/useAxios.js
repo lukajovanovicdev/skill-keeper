@@ -1,20 +1,31 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
-const useAxios = (url) => {
-  const [data, setData] = useState(null);
-  const [error, setError] = useState(null);
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const res = await axios.get(url);
-        setData(res.data);
-      } catch (err) {
-        setError(err);
-      }
-    };
-    getData();
-  }, [url]);
-  console.log("A", data);
-  return { data, error };
+
+const useAxios = () => {
+  const skillURL = "https://6195285474c1bd00176c6be7.mockapi.io/skills";
+
+  // const getSkills = () => {
+  //   axios
+  //     .get(skillURL)
+  //     .then((response) => response.data)
+  //     .catch((err) => console.log(err));
+  // };
+  const getSkillsAsync = async () => {
+    try {
+      const response = await axios(skillURL);
+      const data = response.data;
+      return data;
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const createSkill = (skillData) => {
+    axios
+      .post(skillURL, skillData)
+      .then((response) => response)
+      .catch((err) => console.log(err));
+  };
+
+  return { createSkill, getSkillsAsync };
 };
 export default useAxios;
