@@ -1,7 +1,7 @@
 import React from "react";
 import Skill from "./Skill";
 
-export default function AllSkills({ skills }) {
+export default function AllSkills({ skills, skillsHandlerDelete }) {
   console.log("as", skills);
   return (
     <div>
@@ -11,6 +11,7 @@ export default function AllSkills({ skills }) {
           url={skill.image}
           id={skill.id}
           key={skill.id}
+          skillsHandlerDelete={skillsHandlerDelete}
         />
       ))}
     </div>
