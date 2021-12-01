@@ -5,7 +5,11 @@ import Task from "./pages/Task";
 import Skills from "./pages/Skills";
 
 function App() {
+// TODO Generalno evo primera strukture foldera kojom se mozete voditi: https://medium.com/@kolbysisk/react-folder-structure-for-enterprise-level-applications-f8384eff162b
+
   return (
+
+    // TODO Header izdvojiti u posebnu komponentu
     <div>
       <nav className="Nav">
         <ul>
@@ -21,6 +25,7 @@ function App() {
         </ul>
       </nav>
 
+     {/* TODO Rute izdvojiti u poseban fajl */}
       <Routes>
         <Route path="/" element={<Task />} />
         <Route path="users" element={<Users />} />

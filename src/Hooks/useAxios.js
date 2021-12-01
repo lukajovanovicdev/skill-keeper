@@ -3,6 +3,9 @@ import axios from "axios";
 const useAxios = () => {
   const skillURL = "https://6195285474c1bd00176c6be7.mockapi.io/skills";
 
+  /* TODO Ovde treba iskoristiti react state i optimizovati hook
+  https://dev.to/ms_yogii/useaxios-a-simple-custom-hook-for-calling-apis-using-axios-2dkj */
+
   // const getSkills = () => {
   //   axios
   //     .get(skillURL)
