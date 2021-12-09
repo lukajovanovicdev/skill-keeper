@@ -21,8 +21,9 @@ export default function Skill({
       <Grid container justifyContent="space-between">
         {/* TODO useCheckbox deluje kao da se nigde ne setuje, umesto praznog fragmenta, ne bi bilo lose staviti neku sliku kao placeholder */}
         <Grid item>{useCheckbox ? <></> : <img src={url}></img>}</Grid>
+        <Grid item>{name} conflict</Grid>
         <Grid item>{name}</Grid>
-        <Grid item>
+        <div item>
           {useCheckbox ? (
             <input type="checkbox"></input>
           ) : (
@@ -35,7 +36,7 @@ export default function Skill({
               Delete
             </Button>
           )}
-        </Grid>
+        </div>
       </Grid>
     </Box>
   );

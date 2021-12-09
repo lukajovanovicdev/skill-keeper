@@ -12,7 +12,7 @@ export default function AllSkills({
   console.log("as", skills); // TODO console.log() ne treba da postoji na master grani (pod pretpostavkom da ce se sa te grane raditi deployment na testna i produkciona okruzenja)
   return (
     // TODO umesto div-a, ukoliko ne stilizujete ceo wrapper komponente pa dodajete klasu, uvek treba koristiti Fragmente https://dev.to/za3k0st/react-fragment-vs-div-44bn
-    <div>
+    <div className="conflict">
       {skills.map((skill) => (
         <Skill
           name={skill.name}
