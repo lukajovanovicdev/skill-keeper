@@ -6,12 +6,6 @@ const useAxios = () => {
   /* TODO Ovde treba iskoristiti react state i optimizovati hook
   https://dev.to/ms_yogii/useaxios-a-simple-custom-hook-for-calling-apis-using-axios-2dkj */
 
-  // const getSkills = () => {
-  //   axios
-  //     .get(skillURL)
-  //     .then((response) => response.data)
-  //     .catch((err) => console.log(err));
-  // };
   const getSkillsAsync = async () => {
     try {
       const response = await axios(skillURL);

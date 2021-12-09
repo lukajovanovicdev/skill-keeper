@@ -13,18 +13,21 @@ export default function Skill({
   name,
   url,
   skillsHandlerDelete,
+  // TODO ne koristiti useCheckbox ili bilo sta sa use za naming ako nije u pitanju hook
   useCheckbox,
 }) {
   return (
     <Box sx={{ flexGrow: 1 }} className={classes.Card}>
       <Grid container justifyContent="space-between">
         {/* TODO useCheckbox deluje kao da se nigde ne setuje, umesto praznog fragmenta, ne bi bilo lose staviti neku sliku kao placeholder */}
-        <Grid item>{useCheckbox ? <></> : <img src={url}></img>}</Grid>
+        <Grid item>
+          {useCheckbox ? <></> : <img src={url}></img>}
+        </Grid>
         <Grid item>{name}</Grid>
         <Grid item>{name}</Grid>
         <Grid item>
           {useCheckbox ? (
-            <input type="checkbox"/>
+            <input type="checkbox" />
           ) : (
             /* TODO skillsHandlerDelete - 1. naming 2. f-ja se ne koristi nigde drugde, trebala je biti definisana u ovoj komponenti da se izbegne nepotrebni prop drilling*/
             <Button

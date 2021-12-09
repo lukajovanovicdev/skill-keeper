@@ -26,10 +26,7 @@ function App() {
       </nav>
 
      {/* TODO Rute izdvojiti u poseban fajl */}
-      <Routes>
-        <Route path="/" element={<Task />} />
-        <Route path="users" element={<Users />} />
-        <Route path="skills" element={<Skills />} />
+      <Routes><Route path="/" element={<Task />} /><Route path="users" element={<Users />} /><Route path="skills" element={<Skills />} />
       </Routes>
     </div>
   );
