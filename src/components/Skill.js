@@ -13,6 +13,7 @@ export default function Skill({
   name,
   url,
   skillsHandlerDelete,
+  // TODO ne koristiti useCheckbox ili bilo sta sa use za naming ako nije u pitanju hook
   useCheckbox,
 }) {
   return (
