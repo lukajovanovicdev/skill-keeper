@@ -21,9 +21,10 @@ export default function Skill({
         {/* TODO useCheckbox deluje kao da se nigde ne setuje, umesto praznog fragmenta, ne bi bilo lose staviti neku sliku kao placeholder */}
         <Grid item>{useCheckbox ? <></> : <img src={url}></img>}</Grid>
         <Grid item>{name}</Grid>
+        <Grid item>{name}</Grid>
         <Grid item>
           {useCheckbox ? (
-            <input type="checkbox"></input>
+            <input type="checkbox"/>
           ) : (
             /* TODO skillsHandlerDelete - 1. naming 2. f-ja se ne koristi nigde drugde, trebala je biti definisana u ovoj komponenti da se izbegne nepotrebni prop drilling*/
             <Button
